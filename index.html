@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Quiz System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- PROJECT TITLE -->
+        <h1>Online Quiz System</h1>
+
+
+        <!-- START SCREEN -->
+
+        <div id="start-screen">
+
+            <p>Enter your name to start the quiz</p>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name"
+            >
+
+            <br><br>
+
+            <button onclick="startQuiz()">
+                Start Quiz
+            </button>
+
+        </div>
+
+
+        <!-- QUIZ SCREEN -->
+
+        <div id="quiz-screen" style="display: none;">
+
+            <!-- Student Name -->
+
+            <h3 id="welcomeMessage"></h3>
+
+
+            <!-- ONE TIMER FOR WHOLE QUIZ -->
+
+            <p id="timer">
+                ⏱️ Time: 02:00
+            </p>
+
+
+            <!-- Question Number -->
+
+            <p id="questionNumber">
+                Question 1 of 10
+            </p>
+
+
+
+            <!-- Question -->
+
+            <h2 id="question"></h2>
+
+
+            <!-- Options -->
+
+            <div id="options"></div>
+
+
+            <br>
+
+
+            <!-- Navigation Buttons -->
+
+            <div class="navigation-buttons">
+
+    <button
+        id="prevBtn"
+        onclick="previousQuestion()"
+    >
+        ← Previous
+    </button>
+
+    <button
+        id="nextBtn"
+        onclick="nextQuestion()"
+    >
+        Next Question →
+    </button>
+
+</div>
+        </div>
+
+
+        <!-- RESULT SCREEN -->
+
+        <div
+            id="result-screen"
+            style="display: none;"
+        >
+
+            <h2>
+                🎉 Quiz Completed!
+            </h2>
+
+
+            <div class="result-card">
+
+                <h3 id="resultStudentName"></h3>
+
+
+                <div class="score-box">
+
+                    <span id="finalScore">
+                        0 / 10
+                    </span>
+
+                </div>
+
+
+                <p id="finalPercentage">
+                    Percentage: 0%
+                </p>
+
+
+                <p id="correctAnswers">
+                    Correct Answers: 0
+                </p>
+
+
+                <p id="wrongAnswers">
+                    Wrong Answers: 0
+                </p>
+
+
+                <h3 id="finalStatus"></h3>
+
+            </div>
+
+
+            <!-- Restart -->
+
+            <button onclick="location.reload()">
+                🔄 Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
